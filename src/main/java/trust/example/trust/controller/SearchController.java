@@ -1,0 +1,31 @@
+package trust.example.trust.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import trust.example.trust.beans.Product;
+import trust.example.trust.repository.ProductRepository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Controller
+public class SearchController {
+
+    @Autowired
+    ProductRepository productRepository;
+
+    @GetMapping("/search")
+    public String search(@RequestParam("search") String search, Model model){
+        System.out.println("user is in search controller!");
+        System.out.println("Search criteria: "+  search);
+
+        List<Product> products = new ArrayList<>();
+        products = productRepository.searchByName(search);
+        model.addAttribute("products",products);
+        return "search";
+    }
+
+}
