@@ -2,7 +2,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <head>
     <meta charset="UTF-8">
-    <title>Trust Painting AU</title>
+    <title>Trust Sport AU</title>
   <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -11,7 +11,7 @@
     <nav class="nav" role="navigation">
         <div class="container nav-elements">
             <div class="branding">
-                <a href="#home"><img src="images/trustlogo.png" alt="Trust Painting logo"></a>
+                <a href="/home"><img src="images/trustlogo.jpg" alt="Trust Product logo"></a>
             </div><!-- branding -->
             <ul class="navbar">
                 <li><a href="/home">home</a></li>
@@ -22,31 +22,19 @@
         </div><!-- container nav-elements -->
     </nav>
     <div class="container tagline">
-        <h1 class="headline">Our Mission</h1>
-        <p>We make your house paint and repair <em></em> amazing and beautiful, by offering <em>completely your choice</em> by <em>trustworthy </em> painters for your <em>house/apartment</em></p>
-    </div><!-- container tagline -->
-</header><!-- #home -->
+            <h1 class="headline">Our Mission</h1>
+            <p>We support and encourage <em>active and healthy</em> lifestyles, by offering <em>ethically sourced</em> and <em>eco-friendly</em> nutritional products for the <em>performance-driven</em> athlete.</p>
+        </div><!-- container tagline -->
+    </header><!-- #home -->
 
 <section id="history" class="section">
     <div class="container">
         <div class="text-content">
             <h2 class="headline">Company History</h2>
-            Independent painter
-
-            <p><li> Took up various painting projects including houses, schools and offices; interior and exterior </p></li>
-            <p><li> completed a project wherein I served as a valuable member of the team that painted 50 ships for launching </p></li>
-            <p><li> Executed several projects that yes of wood techniques like seizing, painting and polishing wooden furniture </p></li>
-
-
-           <h3> Education: </h3>
-            Certificate lll on painting and decorating <br>
-            Full license on painting <br>
-            </p>
-
-            <h3> ADD ATTRACTIONS </h3>
-            <p> <li> Own a reliable vehicle for transport to and from work site </p> </li>
-            <p> <li>  Possess personal basic painting hand tools kit. </p> </li>
-            </div>
+            <p>In 2006, Trust Sport founder <a href="#employees-henrytwill">Henry Twill</a> set out to create supplements and nutritional products made from the <em>purest ingredients</em> and backed by scientific and <em>performance data</em> – to provide a strong basis of <em>trust and accountability</em>.</p>
+            <p>His quest began while training for his <em>first 5K marathon</em>, after recovering from a <em>lengthy injury</em> that left him with residual aches, pains, and decreased athletic performance. He yearned for <em>simple and natural ingredients</em>, in their purest form, instead of labels with <em>lengthy chemical names</em> and disclaimers. When no products lived up to his strict requirements, Henry set his sights on <em>creating products</em> that catered to his own vision.</p>
+            <p>Today that vision has become Trust Sport…offering a variety of <a href="#products">supplements, energy bars and rehydration solutions</a>. At the foundation of H+ Sports are products backed by scientific and performance data.</p>
+        </div>
     </div><!-- container text -->
 </section><!-- #history -->
 
@@ -126,7 +114,7 @@
         <nav class="nav" role="navigation">
             <div class="container nav-elements">
                 <div class="branding">
-                    <a href="#home"><img src="images/trustlogo.png" alt="Logo - H Plus Sports"></a>
+                    <a href="/home"><img src="images/trustlogo.jpg" alt="Logo - Trust Sports"></a>
                     <p class="address">100 Main Street<br>
                         Seattle, WA 98144
                     </p>
