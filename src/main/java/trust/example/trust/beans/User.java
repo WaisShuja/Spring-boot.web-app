@@ -3,14 +3,24 @@ package trust.example.trust.beans;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 @Entity
 public class User {
 
     @Id
     private int Id;
+//     Adding Validation for form fields, using JSR 380 Validation method.
+
+    @Size(min = 6, message = "{username.not.empty}")
     private String username;
+
+    @Pattern(regexp = "((?=.*[A-Z]).{5,12})", message = "{password.valid}")
     private String password;
+
+    @NotEmpty(message = "{first.name.not.empty}")
     private String firstName;
     private String lastName;
     private String activity;
