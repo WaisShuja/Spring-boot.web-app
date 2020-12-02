@@ -1,12 +1,14 @@
-package trust.example.trust;
+package trust.example.trust.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
+import trust.example.trust.converter.StringToEnumConverter;
 
 @Configuration
 @ComponentScan(basePackages = "trust.example.trust")
@@ -28,4 +30,8 @@ public class ApplicationConfig extends WebMvcConfigurationSupport {
         return viewResolver;
      }
 
+     @Override
+     protected void addFormatters(FormatterRegistry registry){
+        registry.addConverter(new StringToEnumConverter());
+     }
 }

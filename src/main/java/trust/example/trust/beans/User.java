@@ -2,10 +2,13 @@ package trust.example.trust.beans;
 
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.util.Date;
 
 @Entity
 public class User {
@@ -24,8 +27,10 @@ public class User {
     private String firstName;
     private String lastName;
     private String activity;
-    private String dateOfBirth;
-    private String gender;
+    private Date dateOfBirth;
+
+    @Enumerated(EnumType.STRING)  // To display Gender as String
+    private Gender gender;
 
 
     public String getUsername() {
@@ -68,19 +73,19 @@ public class User {
         this.activity = activity;
     }
 
-    public String getDateOfBirth() {
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 }
