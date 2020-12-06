@@ -1,10 +1,9 @@
 package trust.example.trust.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestParam;
+import trust.example.trust.beans.Login;
 import trust.example.trust.beans.User;
 
 import java.util.Arrays;
@@ -36,8 +35,7 @@ public class HomeController {
             System.out.println("User is going to Registration page...");
             return "register";
         }
-
-        @ModelAttribute("genderItems")
+   /*     @ModelAttribute("genderItems")
         public List<String> genderItems(){
             return Arrays.asList(new String []{"Male","Female","Other"});
         }
@@ -46,4 +44,11 @@ public class HomeController {
         public User getDefaultUser(){
             return new User();
         }
+
+        @ModelAttribute("login")
+        public Login defaultLogin(){
+            return new Login();
+        }
+*/
+//        These modelAttributes are moved into the ModelAttributeController...
 }
