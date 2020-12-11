@@ -10,21 +10,36 @@ import trust.example.trust.beans.User;
 import trust.example.trust.exception.ApplicationException;
 import trust.example.trust.repository.UserRepository;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.concurrent.Callable;
+
 @Controller
 public class LoginController {
 
     @Autowired
     private UserRepository userRepository;
 
-    @PostMapping("/userLogin")
-    public String userLogin(@ModelAttribute("login") Login login){   //Note
-        System.out.println("User is trying to login...");
 
-        User user  = userRepository.searchByUsername(login.getUsername());
-        if (user == null){
-            throw new ApplicationException("User not found!");
-        }
-        return "search";
+//   3: Return a Callable<String> / DefferedResult<String>
+    @PostMapping("/userLogin")
+    public Callable <String> userLogin(@ModelAttribute("login") Login login, HttpServletRequest request){   //Note
+        System.out.println("User is trying to login...");
+//    To make sure the Async flag is enabled >
+        System.out.println("Async Supported in Trust Application: "+ request.isAsyncSupported());
+
+//     Getting the Servlet container Thread's name..
+        System.out.println("Thread from Servlet container:"+ Thread.currentThread().getName());
+
+        return ()->{
+            Thread.sleep(3000);
+            System.out.println("Thread from Spring mvc container:"+ Thread.currentThread());
+            User user  = userRepository.searchByUsername(login.getUsername());
+            if (user == null){
+                throw new ApplicationException("User not found!");
+            }
+            return "search";
+        };
+
     }
 /*    @ExceptionHandler(ApplicationException.class)
     public String exceptionHandler(){

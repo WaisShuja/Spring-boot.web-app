@@ -17,6 +17,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.Callable;
 
 @Controller
 public class RegistrationController {
@@ -28,6 +29,7 @@ public class RegistrationController {
     public void initBinder(WebDataBinder binder){
         binder.registerCustomEditor(Date.class, "dateOfBirth", new CustomDateEditor(new SimpleDateFormat("yyyy-mm-dd"), true));
     }
+
 
     @PostMapping("/register")
     public String registerUser(@Valid @ModelAttribute("newuser")User user, BindingResult result, Model model){
