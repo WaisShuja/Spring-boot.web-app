@@ -3,6 +3,7 @@ package trust.example.trust.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.task.AsyncTaskExecutor;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
@@ -11,6 +12,8 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
+import org.springframework.web.servlet.view.ResourceBundleViewResolver;
+import org.springframework.web.servlet.view.XmlViewResolver;
 import trust.example.trust.converter.StringToEnumConverter;
 
 @Configuration
@@ -23,15 +26,16 @@ public class ApplicationConfig extends WebMvcConfigurationSupport {
                 .addResourceLocations("classpath:static/css/", "classpath:/static/images/");
     }
 
-
     @Bean
     public InternalResourceViewResolver jspViewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setPrefix("/WEB-INF/jsp/");
         viewResolver.setSuffix(".jsp");
         viewResolver.setViewClass(JstlView.class);
+        viewResolver.setOrder(3);
         return viewResolver;
     }
+
 
     @Override
     protected void addFormatters(FormatterRegistry registry) {
@@ -58,5 +62,24 @@ public class ApplicationConfig extends WebMvcConfigurationSupport {
         return threadPoolTaskExecutor;
     }
 
+//    ViewResolver through XML
+    @Bean
+    public XmlViewResolver xmlVresolver(){
+        XmlViewResolver viewResolver = new XmlViewResolver();
+        viewResolver.setLocation(new ClassPathResource("xmlViews.xml"));
+        viewResolver.setOrder(1);
+        return viewResolver;
+    }
+
+
+//    ViewResolver through .properties
+
+    @Bean
+    public ResourceBundleViewResolver bundleViewResolver(){
+        ResourceBundleViewResolver viewResolver = new ResourceBundleViewResolver();
+        viewResolver.setBasename("viewRBVR"); // All views are defined in viewRBVR.properties file
+        viewResolver.setOrder(2);
+        return viewResolver;
+    }
 
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <title>HPlus</title>
+    <title>Trust</title>
    <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -10,7 +10,7 @@
     <nav class="nav" role="navigation">
         <div class="container nav-elements">
             <div class="branding">
-                <a href="#home"><img src="images/hpluslogo.svg" alt="Logo - H Plus Sports"></a>
+                <a href="/home"><img src="images/trustlogo.jpg" alt="Trust Product logo"></a>
             </div><!-- branding -->
             <ul class="navbar">
                 <li><a href="/home">home</a></li>
@@ -34,14 +34,14 @@
         <nav class="nav" role="navigation">
             <div class="container nav-elements">
                 <div class="branding">
-                    <a href="#home"><img src="images/hpluslogo.svg" alt="Logo - H Plus Sports"></a>
+                    <a href="/home"><img src="images/trustlogo.jpg" alt="Trust Product logo"></a>
                     <p class="address">100 Main Street<br>
                         Seattle, WA 98144
                     </p>
                 </div>
             </div>
         </nav>
-        <p class="legal">H+ Sport is a fictitious brand created by lynda.com solely for the purpose of training. All products and people associated with H+ Sport are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+        <p class="legal"> All products and people associated with Trust Sport are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
     </div><!-- container -->
 </footer><!-- footer -->
 
