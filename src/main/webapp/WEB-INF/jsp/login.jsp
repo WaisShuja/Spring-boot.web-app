@@ -52,8 +52,7 @@
 			<nav class="nav" role="navigation">
 				<div class="container nav-elements">
 					<div class="branding">
-						<a href="#home"><img src="images/trustlogo.jpg"
-							alt="Logo - H Plus Sports"></a>
+						<a href="/home"><img src="images/trustlogo.jpg" alt="Logo Trust Sports"></a>
 						<p class="address">
 							100 Main Street<br> Seattle, WA 98144
 						</p>
