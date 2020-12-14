@@ -13,7 +13,5 @@ To run and discover what this application is about, these steps should be follow
 
 4. User can go to Login page and register new user by submitting a full form.
 
-5: The form use JSR-380 validations. So bad data are not allowed.
-
-To view this project how it's running, watch it on YouTube -> https://www.youtube.com/watch?v=GPlbDgzoUTg
+  5: The form use JSR-380 validations. So bad data are not allowed.
 
