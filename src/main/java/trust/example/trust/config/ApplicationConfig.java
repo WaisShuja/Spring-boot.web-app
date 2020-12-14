@@ -8,6 +8,7 @@ import org.springframework.core.task.AsyncTaskExecutor;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
@@ -15,6 +16,7 @@ import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.ResourceBundleViewResolver;
 import org.springframework.web.servlet.view.XmlViewResolver;
 import trust.example.trust.converter.StringToEnumConverter;
+import trust.example.trust.interceptor.LoggingInterceptor;
 
 @Configuration
 @ComponentScan(basePackages = "trust.example.trust")
@@ -80,6 +82,15 @@ public class ApplicationConfig extends WebMvcConfigurationSupport {
         viewResolver.setBasename("viewRBVR"); // All views are defined in viewRBVR.properties file
         viewResolver.setOrder(2);
         return viewResolver;
+    }
+
+
+//    To make Spring aware of our custom Interceptor, we add the interceptorClass
+    @Override
+    protected void addInterceptors(InterceptorRegistry registry){
+        registry.addInterceptor(new LoggingInterceptor()).addPathPatterns("/*");
+
+//        we call the interceptor for every pattern in the application
     }
 
 }
