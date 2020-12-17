@@ -18,6 +18,7 @@
 				<ul class="navbar">
 					<li><a href="/home">home</a></li>
 					<li><a href="/goTosearch">search</a></li>
+					<li><a href="/linkedIn">LinkedIn</a></li>
 
 				</ul>
 				<!-- navbar -->

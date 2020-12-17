@@ -21,7 +21,7 @@
                                 <li><a href="/home">home</a></li>
                                 <li><a href="/goToLogin">login</a></li>
                                 <li><a href="/goToSearch">search</a></li>
-                                <li><a href="#">linkedIn</a></li>
+                                <li><a href="/linkedIn">linkedIn</a></li>
                             </ul><!-- navbar -->
 				<!-- navbar -->
 			</div>
