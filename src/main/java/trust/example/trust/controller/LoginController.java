@@ -25,6 +25,9 @@ public class LoginController {
 //   3: Return a Callable<String> / DefferedResult<String>
     @PostMapping("/userLogin")
     public Callable <String> userLogin(@ModelAttribute("login") Login login, HttpServletRequest request){   //Note
+
+//        Full session management can be done here too, using HttpSession.
+
         System.out.println("User is trying to login...");
 //    To make sure the Async flag is enabled >
         System.out.println("Async Supported in Trust Application: "+ request.isAsyncSupported());
