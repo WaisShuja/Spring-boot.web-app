@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Trust Sport AU</title>
-  <link rel="stylesheet" href="css/style.css" type="text/css"/>
+ <!--  <link rel="stylesheet" href="css/style.css" type="text/css"/> -->
   <link rel="stylesheet" href="<spring:theme code='styleSheet'/> " />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -16,10 +16,10 @@
                 <a href="/home"><img src="images/trustlogo.jpg" alt="Trust Product logo"></a>
             </div><!-- branding -->
             <ul class="navbar">
-                <li><a href="/home">home</a></li>
-                <li><a href="/goToLogin">login</a></li>
-                <li><a href="/goToSearch">search</a></li>
-                <li><a href="/linkedIn">linkedin</a></li>
+                <li><a href="/home"><spring:message code="label.home"/></a></li>
+                <li><a href="/goToLogin"><spring:message code="label.login"/></a></li>
+                <li><a href="/goToSearch"><spring:message code="label.search"/></a></li>
+                <li><a href="/linkedIn"><spring:message code="label.linkedin"/></a></li>
             </ul><!-- navbar -->
         </div><!-- container nav-elements -->
     </nav>
