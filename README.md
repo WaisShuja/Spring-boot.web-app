@@ -11,7 +11,7 @@ To run and discover what this application is about, these steps should be follow
 3. User can go to Search page to search for products. For example: water,protein, chocolate, and etc.
 4. User can go to Login page and register new user by submitting a full form.
 5. The form use JSR-380 validations. So bad data are not allowed.
-6. User can log in by using a legit username. once user is loged in, user can log out as well.
+6. User can log in by using a registered username. once user is loged in, user can log out as well.
 
 x
 
