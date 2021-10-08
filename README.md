@@ -1,5 +1,5 @@
 # Spring-boot.web-app
-Hi I'm Wais Shuja.
+
 I'm currently working on this repository (Spring Boot web application for the Trust's Sport products).
 Ask me anything if you need to know about this application.
 
